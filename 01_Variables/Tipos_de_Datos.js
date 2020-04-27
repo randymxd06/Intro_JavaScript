@@ -3,7 +3,6 @@ let nombreCompleto = "Randy";
 let apellido = 'Martinez';
 let pais = `Republica Dominicana`;
 
-
 // Numero = Number
 let edad = 19;
 let año = 2020;
@@ -28,3 +27,9 @@ console.log(typeof precio);
 
 let resultado = precio + 15;
 console.log(resultado);
+
+/*
+Este es un comentario multilinea
+aqui puedo escribir en diferentes lineas a la vez
+sin la necesidad de estar poniendo doble barra
+*/
