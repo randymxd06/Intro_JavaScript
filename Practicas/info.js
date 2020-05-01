@@ -1,6 +1,5 @@
 //1. Crea un array con los días de la semana que el usuario digite.
 //=================================================================================================================\\
-
 //Declaro el Array para los días de la semana//
 let diasSemana = [];
 //Declaro una variable para dejar de digitar días de la semana //
