@@ -4,7 +4,7 @@ let diasSemana = [];
 let cantDias = Number(prompt("Escriba la cantidad de días que usted desee digitar"));
 //Verifico que la cantidad de dias no sea Negativa o Cero//
 while(cantDias < 1 || cantDias > 7){
-    alert("Error, los días no pueden ser negativos o cero tampoco puede ser mayor a 7");
+    alert("Error, los días no pueden ser Negativos o Cero tampoco puede ser mayor a 7");
     //Hasta que no digites una cantidad que sea mayor a 0 no saldrá del ciclo//
     cantDias = Number(prompt("Escriba la cantidad de días que usted desee digitar"));
 }
