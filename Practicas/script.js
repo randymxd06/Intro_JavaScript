@@ -4,7 +4,7 @@ let btnOcultar = document.querySelector("#boton");
 
 btnOcultar.addEventListener("dblclick", function(){
     //divText.style.display = "none";
-    divText.classList = "d-none";
+    divText.classList.add("d-none");
     h1_text.style.color = "red";
     h1_text.innerHTML = "<i>Haz hecho doble click</i>";
 });
