@@ -7,27 +7,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Bienvenido a Githubgram</h1>
+    <h1 style="margin-left: 30px;">Bienvenido a Githubgram</h1>
     <hr>
+    <div class="container">
 
-    <div class="row">
-        <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="digita el nombre de un usuario">
-            <button class="btn btn-primary">Buscar usuario</button>
+        <div class="input-group mb-3 w-75">
+            <input type="text" class="form-control" placeholder="Recipient's username">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Buscar</button>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img class="imagen_perfil w-100" src="https://img.favpng.com/7/5/8/computer-icons-font-awesome-user-font-png-favpng-YMnbqNubA7zBmfa13MK8WdWs8.jpg" alt="image">
+            </div>
+            <div class="col-md-4">
+                <h3 class="nombre">Nombre del usuario</h3>
+                <p class="nombre_usuario">@nombreusuario</p>
+                <p>Seguidores: <span class="seguidores"></span></p>
+                <p>Siguiendo: <span class="siguiendo"></span></p>
+            </div>
+        </div>
+
+        <script src="./js/script.js"></script>
+
     </div>
 
-    <hr>
-
-    <div class="row">
-        <div class="col-md-3">
-            <img class="w-50" src="https://img.favpng.com/7/5/8/computer-icons-font-awesome-user-font-png-favpng-YMnbqNubA7zBmfa13MK8WdWs8.jpg" alt="image">
-        </div>
-        <div class="col-md-4">
-            <h3>Nombre del usuario</h3>
-            <p>@nombreusuario</p>
-        </div>
-    </div>
+    
 
 </body>
 </html>
