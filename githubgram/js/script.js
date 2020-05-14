@@ -17,7 +17,7 @@ let usuarioGitHubJSON = `{
 let ObjetoJSON = JSON.parse(usuarioGitHubJSON);
 console.log(ObjetoJSON.nombre);
 console.log(ObjetoJSON.nombre_usuario);
-console.log(ObjetoJSON.url_imagen);*/
+console.log(ObjetoJSON.url_imagen);
 
 let miUsuarioJSON = `{
     "login": "randymxd06",
@@ -51,26 +51,46 @@ let miUsuarioJSON = `{
   "following": 10,
   "created_at": "2019-09-23T02:45:18Z",
   "updated_at": "2020-04-28T16:10:41Z"
-}`;
-
-let user = JSON.parse(miUsuarioJSON);
+}`;*/
 
 //Seleccionar los elementos
 const imgPerfil = document.querySelector(".imagen_perfil");
 const tituloNombre = document.querySelector("h3.nombre");
 const parrafoNombreUsuario = document.querySelector("p.nombre_usuario");
-
-//Actualizar la ruta de la imagen
-imgPerfil.src = user.avatar_url;
-
-//Actualizar el nombre
-tituloNombre.textContent = user.name;
-
-//Actualizar el nombre de usuario
-parrafoNombreUsuario.textContent = user.login;
-
 const spanSeguidores = document.querySelector(".seguidores");
 const spanSiguiendo = document.querySelector(".siguiendo");
+const parraroBio = document.querySelector(".bio");
+const btnBuscar = document.querySelector("#buscar");
+const barraBusqueda = document.querySelector("#barra_busqueda");
 
-spanSeguidores.textContent = user.followers;
-spanSiguiendo.textContent = user.following;
+btnBuscar.addEventListener("click", function(){
+    obtenerDatosGitHub();
+});
+
+//Pasos para obtener los datos:
+//1. Crear una funcion asincrona
+async function obtenerDatosGitHub(){
+
+    let valor = barraBusqueda.value;
+    //2. Ejecutar una petición y esperar por la respuesta
+    let respuesta = await fetch("https://api.github.com/users/"+valor);
+
+    //3. Verificar si la respuesta está bien
+    if(respuesta.ok){
+
+        //4. Convertir la respuesta y procesarla
+        let datos = await respuesta.json();
+        
+        //Actualizar la información en la página
+        imgPerfil.src = datos.avatar_url;
+        tituloNombre.textContent = datos.name;
+        parrafoNombreUsuario.textContent = datos.login;
+        spanSeguidores.textContent = datos.followers;
+        spanSiguiendo.textContent = datos.following;
+        parraroBio.textContent = datos.bio;
+        
+    }else{
+        console.log("Ocurrió un error");
+    }
+
+}
