@@ -30,4 +30,3 @@ por lo tanto no es palíndroma*/
 else{
     alert(palabra + " no es una palabra palíndroma");
 }
-
