@@ -18,6 +18,6 @@ console.log(typeof num1);
 
 num1 = Number.parseInt(num1);
 num2 = Number.parseInt(num2);
-
-console.log(num1+num2);
+respuesta = num1+num2;
+alert(`La suma es ${respuesta}`);
 
